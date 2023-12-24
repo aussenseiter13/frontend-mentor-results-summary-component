@@ -7,6 +7,12 @@ body {
     background: var(--white);
 }
 
+body main section {
+    border-bottom: 1px var(--light-lavander) solid;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
 .result {
     background: linear-gradient(var(--slate-blue), var(--royal-blue));
     color: var(--white);
@@ -135,4 +141,34 @@ body {
 
 .summary-submit button:hover {
     background: linear-gradient(var(--violet-blue), var(--royal-blue));
+}
+
+@media (min-width: 1025px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body main section {
+        display: flex;
+        max-width: fit-content;
+        background: var(--white);
+        border: 1px var(--light-lavander) solid;
+        border-radius: 2rem;
+        max-width: 50rem;
+    }
+
+    .result {
+        flex: 1;
+        border-radius: 2rem;
+    }
+
+    .result .result-circle h1 {
+        font-size: calc(1rem * 4);
+    }
+
+    .summary {
+        flex: 1;
+    }
 }
